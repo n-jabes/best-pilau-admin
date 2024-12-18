@@ -7,23 +7,28 @@
   font-family: Outfit;
 }
 
-
-body{
+body {
   min-height: 100vh;
   background-color: #fcfcfc;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-hr{
+hr {
   border: none;
   height: 1px;
   background-color: #a9a9a9;
 }
 
-.app-content{
+.app-content {
   display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
