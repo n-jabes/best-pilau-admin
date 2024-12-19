@@ -9,9 +9,12 @@
 .add form {
   gap: 20px;
 }
+.add-img-upload {
+  width: 150px;
+}
 
 .add-img-upload img {
-  width: 120px;
+  width: 100%;
 }
 
 .add-product-name,
@@ -30,20 +33,21 @@
   /* justify-content: space-between; */
 }
 
-.add-category-price select, .add-category-price input{
-    max-width: 120px;
-    padding: 10px;
+.add-category-price select,
+.add-category-price input {
+  max-width: 120px;
+  padding: 10px;
 }
 
-.add .flex-col button{
-    max-width: 120px;
-    border: none;
-    padding: 10px;
-    background-color: black;
-    color: #fff;
-    cursor: pointer;
+.add .flex-col button {
+  max-width: 120px;
+  border: none;
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
 }
 
-.add .flex-col button:hover{
-    background-color: rgba(0, 0, 0, 0.897);
+.add .flex-col button:hover {
+  background-color: rgba(0, 0, 0, 0.897);
 }
