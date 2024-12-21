@@ -1,5 +1,5 @@
-.orders{
-    padding: 10px 30px;
+.orders {
+  padding: 10px 30px;
 }
 
 .orders .order-list .order-item {
@@ -14,52 +14,65 @@
   color: #505050;
 }
 
-.order-item-food, .order-item-name {
-    font-weight: 600;
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
 }
 
-.order-item-name{
-    margin-top: 25px;
-    margin-bottom: 5px;
+.order-item-name {
+  margin-top: 25px;
+  margin-bottom: 5px;
 }
 
-.order-item-address{
-    margin-bottom: 10px;
+.order-item-address {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.order-item select {
+  width: max(10vw, 150px);
+  padding: 10px;
+  outline: none;
+}
+
+.order-item .tomato-select {
+  border: 1px solid tomato;
+  background: #ffe8e4;
+}
+.order-item .orange-select {
+  background: rgba(0, 81, 255, 0.2);
+  border: 1px solid rgb(0, 81, 255);
+}
+.order-item .green-select {
+  background: rgba(32, 233, 65, 0.253);
+  border: 1px solid rgb(12, 158, 36);
+}
+
+@media (max-width: 700px) {
+  .orders {
+    padding: 20px;
+  }
+
+  .orders .order-list .order-item {
     font-size: 12px;
-}
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px;
+    gap: 15px;
+    margin: 15px 0px;
+  }
 
-.order-item select{
-    background: #ffe8e4;
-    border: 1px solid tomato;
-    width: max(10vw, 150px);padding: 10px;outline: none;
-}
+  .order-item select {
+    padding: 5px;
+    font-size: 12px;
+  }
 
-@media (max-width:700px){
-    .orders{
-        padding: 20px;
-    }
-
-    .orders .order-list .order-item {
-        font-size: 12px;
-        grid-template-columns: 0.5fr 2fr 1fr;
-        padding: 15px;
-        gap: 15px;
-        margin: 15px 0px;
-      }
-      
-
-    .order-item select{
-        padding: 5px;
-        font-size: 12px;
-    }
-
-    .order-item img{
-        width: 40px;
-    }
+  .order-item img {
+    width: 40px;
+  }
 }
 
 @media (max-width: 500px) {
-    .orders{
-        padding: 20px 0px;
-    }
+  .orders {
+    padding: 20px 0px;
+  }
 }
