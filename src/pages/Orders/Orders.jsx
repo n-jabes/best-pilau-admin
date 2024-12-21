@@ -20,8 +20,20 @@ const Orders = ({ url }) => {
     fetchAllOrders();
   }, []);
 
+  const statusHandler = async (event, orderId) => {
+    const response = await axios.post(`${url}/api/order/status`, {
+      orderId,
+      status: event.target.value,
+    });
+
+    if (response.data.success) {
+      await fetchAllOrders();
+      toast.success('Order status updated successfully!');
+    }
+  };
+
   return (
-    <div className='orders'>
+    <div className="orders">
       <h3>Order Page</h3>
       <div className="order-list">
         {orders.map((order, index) => (
@@ -56,7 +68,10 @@ const Orders = ({ url }) => {
             </div>
             <p>Items: {order.items.length}</p>
             <p>${order.amount}</p>
-            <select>
+            <select
+              onChange={(e) => statusHandler(e, order._id)}
+              value={order.status}
+            >
               <option value="Food Processing">Food Processing</option>
               <option value="Out For Delivery">Out For Delivery</option>
               <option value="Delivered">Delivered</option>
